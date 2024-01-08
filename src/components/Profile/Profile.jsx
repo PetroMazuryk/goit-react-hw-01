@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import defaultImage from "../Profile/DefAvatar-2.webp";
 
 import {
   Container,
@@ -14,12 +15,12 @@ import {
 } from "./Profile.styled";
 
 export const Profile = ({
-  user: { username = "User Name", tag, location, avatar, stats },
+  user: { username = "User Name", tag, location, avatar = defaultImage, stats },
 }) => {
   return (
     <Container>
       <UserThumb>
-        <Avatar src={avatar} alt="User avatar" />
+        <Avatar src={avatar ?? defaultImage} alt="User avatar" />
         <UserName>{username}</UserName>
         <UserTag>@{tag}</UserTag>
         <Location>{location}</Location>
