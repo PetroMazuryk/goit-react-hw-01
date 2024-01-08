@@ -62,14 +62,13 @@ export const StatListItem = styled.li`
 `;
 
 export const StatLabel = styled.span`
-  font-size: 18px;
+  font-size: 20px;
   display: block;
   margin-bottom: 5px;
   color: var(--grey);
 `;
 
 export const StatValue = styled.span`
-  display: block;
   font-size: 24px;
   font-weight: bold;
 `;
