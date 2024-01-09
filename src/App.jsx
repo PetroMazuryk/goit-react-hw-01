@@ -4,6 +4,7 @@ import { Layout } from "./components/Layout/Layout";
 import { Profile } from "./components/Profile/Profile";
 import { FriendList } from "./components/FriendList/FriendList";
 import { TransactionHistory } from "./components/TransactionHistory/TransactionHistory";
+import { Section } from "./components/Section/Section";
 
 import userData from "./data/userData.json";
 import friends from "./data/friends.json";
@@ -15,9 +16,17 @@ function App() {
   return (
     <Layout>
       <GlobalStyle />
-      <Profile user={userData} />
-      <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />
+      <Section title="Profile">
+        <Profile user={userData} />
+      </Section>
+
+      <Section title="Friends List">
+        <FriendList friends={friends} />
+      </Section>
+
+      <Section title="Transaction History">
+        <TransactionHistory items={transactions} />
+      </Section>
     </Layout>
   );
 }
