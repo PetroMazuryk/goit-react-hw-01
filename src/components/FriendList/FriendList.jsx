@@ -4,10 +4,10 @@ import { List, ListItem } from "./FriendList.styled";
 
 import { FriendListItem } from "../FriendListItem/FriendListItem";
 
-export const FriendList = ({ items }) => {
+export const FriendList = ({ friends }) => {
   return (
     <List>
-      {items.map((item) => {
+      {friends.map((item) => {
         return (
           <ListItem key={item.id}>
             <FriendListItem item={item} />
@@ -18,7 +18,7 @@ export const FriendList = ({ items }) => {
   );
 };
 FriendList.propTypes = {
-  items: PropTypes.arrayOf(
+  friends: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     })

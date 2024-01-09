@@ -15,7 +15,7 @@ import {
 } from "./Profile.styled";
 
 export const Profile = ({
-  user: { username = "User Name", tag, location, avatar = defaultImage, stats },
+  user: { username = "User Name", tag, location, avatar, stats },
 }) => {
   return (
     <Container>

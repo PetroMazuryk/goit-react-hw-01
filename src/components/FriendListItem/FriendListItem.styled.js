@@ -1,11 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  // display: flex;
-  // align-items: center;
   max-width: 160px;
   height: 200px;
-  // margin: 0 auto;
 
   border: 1px solid black;
   padding: 8px;
